@@ -17,10 +17,10 @@
   Yes
 
 - What is the link to your GitHub repository?
-  [Paste your repo link here]
+  https://github.com/pbharvad-ctrl/project---sprint-1-pbharvad/tree/main/lib
 
 - If you are in a group, does everyone have access to the github repo?
-  Yes / No / N/A
+   N/A
 
 - Do you have a “Hello World” program that compiles and runs?
   Yes
