@@ -17,7 +17,7 @@
   Yes
 
 - What is the link to your GitHub repository?
-  https://github.com/pbharvad-ctrl/project---sprint-1-pbharvad/tree/main/lib
+https://github.com/pbharvad-ctrl/project---sprint-1-pbharvad
 
 - If you are in a group, does everyone have access to the github repo?
    N/A
