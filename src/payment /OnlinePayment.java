@@ -1,3 +1,4 @@
+package payment;
 public class OnlinePayment implements PaymentStrategy {
 
     @Override
