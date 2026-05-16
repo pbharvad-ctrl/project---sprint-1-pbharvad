@@ -3,3 +3,8 @@ public class Main {
         System.out.println("Hello World");
     }
 }
+
+PaymentContext context = new PaymentContext();
+
+context.setPaymentStrategy(new CreditCardPayment());
+context.executePayment(25.99);
