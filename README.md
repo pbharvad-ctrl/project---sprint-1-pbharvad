@@ -88,3 +88,161 @@ This project is large enough to demonstrate multiple custom Design Patterns and 
 ## Team Members
 - PREET BHARVAD
 
+# Restaurant Ordering & Management System
+
+## Project Overview
+
+The Restaurant Ordering & Management System is a Java-based software application designed to manage restaurant operations efficiently. The system allows customers to browse menu items, customize food, place orders, process payments, and track order progress. Kitchen staff receive updates for incoming orders, while administrators can manage menu items and monitor restaurant activities.
+
+This project demonstrates Object-Oriented Programming principles and the implementation of software design patterns to improve maintainability, scalability, and flexibility.
+
+---
+
+## Main Features
+
+- Display restaurant menu
+- Add items to shopping cart
+- Customize food orders (extra toppings, sizes, drinks)
+- Place customer orders
+- Process payments
+- Update and track order status
+- Kitchen receives new orders
+- Admin manages menu and reports
+
+---
+
+## Sprint 3 Progress
+
+During Sprint 3, the project was refactored and improved by implementing custom Design Patterns to improve maintainability and organization of the system.
+
+### Design Patterns Implemented
+
+### 1. Strategy Pattern – Payment Processing
+
+The Strategy Pattern was implemented to support multiple payment methods in the restaurant system.
+
+#### Purpose
+Different payment options require different processing logic. Instead of hardcoding payment methods inside a single class, the Strategy Pattern allows payment behaviors to be interchangeable.
+
+#### Implemented Classes
+
+**PaymentStrategy (Interface)**
+- `processPayment(double amount)`
+
+**CashPayment**
+- Handles cash payment processing
+
+**CreditCardPayment**
+- Handles credit card transactions
+
+**OnlinePayment**
+- Handles digital/online payments
+
+**PaymentContext**
+- Selects and executes the chosen payment strategy
+
+#### Example Flow
+Customer places order → selects payment method → system applies selected payment strategy.
+
+#### Benefits
+- Easy to add new payment methods
+- Cleaner code organization
+- Follows Open/Closed Principle
+
+---
+
+### 2. Observer Pattern – Kitchen Order Notifications
+
+The Observer Pattern was implemented to notify kitchen staff when a new order is placed.
+
+#### Purpose
+When customers place an order, kitchen staff should automatically receive updates without tightly coupling kitchen logic to ordering logic.
+
+#### Implemented Classes
+
+**Subject Interface**
+- `registerObserver()`
+- `removeObserver()`
+- `notifyObservers()`
+
+**KitchenStaff (Observer)**
+- Receives notifications for new orders
+
+**OrderManager**
+- Maintains order list
+- Notifies kitchen staff whenever a new order is placed
+
+#### Example Flow
+Customer places order → OrderManager creates order → KitchenStaff automatically receives notification.
+
+#### Benefits
+- Loose coupling between ordering and kitchen system
+- Better scalability
+- Easier to maintain notification system
+
+---
+
+## UML Diagram
+
+A UML diagram containing all classes, interfaces, methods, and fields related to the implemented design patterns is included in the root directory of this repository.
+
+The UML diagram includes:
+
+### Strategy Pattern Classes
+- PaymentStrategy
+- CashPayment
+- CreditCardPayment
+- OnlinePayment
+- PaymentContext
+
+### Observer Pattern Classes
+- Subject
+- Observer
+- KitchenStaff
+- OrderManager
+- Order
+
+---
+
+## Sprint 3 Meaningful Commits
+
+1. Implemented Strategy Pattern for payment processing system
+
+2. Added payment method classes and payment context
+
+3. Implemented Observer Pattern for kitchen notifications
+
+4. Added UML diagram and updated README documentation
+
+---
+
+## Final Submission Goals
+
+For the final submission, the goal is to develop a fully functional Restaurant Ordering & Management System with an interactive interface and complete order management process. Customers will be able to browse menu items, customize food, add items to a cart, place orders, and choose payment methods.
+
+Kitchen staff will receive real-time notifications for incoming orders and update order status throughout preparation. The administrator will be able to manage menu items, monitor restaurant activity, and generate reports. Additional improvements such as database integration using SQLite and a polished GUI using Java Swing or JavaFX are planned.
+
+---
+
+## Problems / Challenges
+
+One challenge during Sprint 3 was integrating Design Patterns into existing code while maintaining system functionality. Refactoring parts of the payment and order systems was necessary to properly implement the Strategy and Observer patterns.
+
+Another challenge is designing the database structure and GUI integration while keeping the system modular and maintainable. Time management and debugging may affect some advanced features planned for the final submission.
+
+---
+
+## Technologies Used
+
+- Java
+- Java Swing / JavaFX
+- JDBC
+- SQLite
+- Gson / Jackson
+- Java Collections Framework
+
+---
+
+## Team Members
+
+**PREET BHARVAD**
