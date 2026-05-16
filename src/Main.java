@@ -10,5 +10,11 @@ public class Main {
 
         context.setPaymentStrategy(new CreditCardPayment());
         context.executePayment(25.99);
+
+        OrderManager manager = new OrderManager();
+        KitchenStaff kitchen = new KitchenStaff();
+        
+        manager.registerObserver(kitchen);
+        manager.placeOrder("Burger with extra cheese");
     }
 }
