@@ -1,3 +1,4 @@
+package observer;
 public class KitchenStaff implements Observer {
 
     @Override
