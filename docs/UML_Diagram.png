@@ -1,0 +1,55 @@
+                Observer
+             <<interface>>
+              + update()
+
+                  ▲
+        ---------------------
+        |                   |
+KitchenStaff     CustomerNotification
+
+
+                 Subject
+             <<interface>>
+        + registerObserver()
+        + removeObserver()
+        + notifyObservers()
+
+                    ▲
+                    |
+             OrderManager
+                              
+            PaymentStrategy
+               <<interface>>
+               + pay()
+
+                    ▲
+      --------------------------------
+      |              |              |
+CashPayment  CreditCardPayment  OnlinePayment
+
+
+             PaymentContext
+             - strategy
+             + setPaymentStrategy()
+             + executePayment()
+
+              FoodItem
+            <<interface>>
+            + prepare()
+
+                  ▲
+            ---------------
+            |             |
+         Burger        Pizza
+
+
+             FoodFactory
+           + createFood()
+
+        RestaurantSystem
+         <<Singleton>>
+
+         - instance
+         - RestaurantSystem()
+         + getInstance()
+         + displayMessage()
