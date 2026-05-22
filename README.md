@@ -246,3 +246,49 @@ Another challenge is designing the database structure and GUI integration while 
 ## Team Members
 
 **PREET BHARVAD**
+
+# Restaurant Ordering & Management System
+
+## Project Description
+
+This Java-based Restaurant Ordering & Management System helps manage restaurant operations efficiently. The system allows order tracking, payment processing, kitchen notifications, and food item management using object-oriented programming and design patterns.
+
+## Design Patterns Implemented
+
+### Observer Pattern
+Used to notify different restaurant components when an order status changes.
+
+Observers:
+- KitchenStaff
+- CustomerNotification
+
+### Strategy Pattern
+Used to support multiple payment methods.
+
+Strategies:
+- Cash Payment
+- Credit Card Payment
+- Online Payment
+
+### Factory Pattern
+Used to create food items dynamically without directly instantiating objects.
+
+Food Types:
+- Burger
+- Pizza
+
+### Singleton Pattern
+Used to maintain a single Restaurant Management System instance.
+
+## Sprint 4 Goals
+
+- Improve restaurant order tracking
+- Expand notification system
+- Add more food types
+- Improve system scalability
+
+## Challenges
+
+- Integrating multiple design patterns together
+- Updating UML diagram to reflect new patterns
+- Managing communication between system components
