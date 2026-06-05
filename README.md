@@ -292,3 +292,44 @@ Used to maintain a single Restaurant Management System instance.
 - Integrating multiple design patterns together
 - Updating UML diagram to reflect new patterns
 - Managing communication between system components
+
+## Sprint 5 Progress
+
+### Design Patterns Implemented
+
+The Restaurant Management System currently implements the following six design patterns:
+
+1. **Singleton Pattern**
+
+   * Ensures only one instance of the RestaurantSystem exists throughout the application.
+
+2. **Strategy Pattern**
+
+   * Allows customers to select different payment methods such as Credit Card, Cash, and Online Payment.
+
+3. **Observer Pattern**
+
+   * Notifies kitchen staff and customers whenever an order is placed.
+
+4. **Factory Method Pattern**
+
+   * Creates food items such as Pizza and Burger without exposing object creation details to the client.
+
+5. **Decorator Pattern**
+
+   * Allows food items to be customized with additional toppings such as cheese and mushrooms without modifying existing classes.
+
+6. **Command Pattern**
+
+   * Encapsulates restaurant actions such as placing and canceling orders into command objects.
+
+### Final Project Goal
+
+The goal of this project is to demonstrate how multiple software design patterns can work together in a Restaurant Management System. The system supports food creation, order management, customer notifications, payment processing, food customization, and kitchen operations while following object-oriented design principles.
+
+### Challenges Encountered
+
+* Refactored the original Factory implementation to better align with the Factory Method design pattern.
+* Integrated multiple design patterns while maintaining low coupling between classes.
+* Updated UML diagrams to accurately represent the relationships between classes and design patterns.
+* Ensured all design patterns work together within a single restaurant management application.
