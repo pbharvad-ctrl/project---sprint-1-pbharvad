@@ -313,7 +313,7 @@ The Restaurant Management System currently implements the following six design p
 
 4. **Factory Method Pattern**
 
-   * Creates food items such as Pizza and Burger without exposing object creation details to the client.
+   * Uses abstract creator classes to create food items such as Pizza and Burger. The client interacts with creator objects instead of directly instantiating food items, making the system easier to extend with new menu items.
 
 5. **Decorator Pattern**
 
