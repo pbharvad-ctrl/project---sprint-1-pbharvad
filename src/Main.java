@@ -2,6 +2,8 @@ import payment.*;
 import observer.*;
 import factory.*;
 import singleton.*;
+import decorator.*;
+import command.*;
 
 public class Main {
 
@@ -57,5 +59,35 @@ public class Main {
 
         FoodItem pizza = FoodFactory.createFood("pizza");
         pizza.prepare();
+
+
+        // ==============================
+        // Decorator Pattern
+        // ==============================
+        System.out.println("\n--- Decorator Pattern: Food Customization ---");
+
+        Food customPizza = new BasicPizza();
+
+        customPizza = new CheeseDecorator(customPizza);
+        customPizza = new MushroomDecorator(customPizza);
+
+        System.out.println("Food Item: " + customPizza.getDescription());
+        System.out.println("Total Cost: $" + customPizza.getCost());
+
+
+        // ==============================
+        // Command Pattern
+        // ==============================
+        System.out.println("\n--- Command Pattern: Kitchen Operations ---");
+
+        KitchenInvoker invoker = new KitchenInvoker();
+
+        Command placeOrder = new PlaceOrderCommand();
+        invoker.setCommand(placeOrder);
+        invoker.executeCommand();
+
+        Command cancelOrder = new CancelOrderCommand();
+        invoker.setCommand(cancelOrder);
+        invoker.executeCommand();
     }
 }
