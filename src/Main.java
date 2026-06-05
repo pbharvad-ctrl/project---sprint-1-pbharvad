@@ -52,14 +52,14 @@ public class Main {
         // ==============================
         // Factory Pattern
         // ==============================
-        System.out.println("\n--- Factory Pattern: Food Creation ---");
-
-        FoodItem burger = FoodFactory.createFood("burger");
+        FoodCreator burgerCreator = new BurgerCreator();
+        
+        FoodItem burger = burgerCreator.createFood();
         burger.prepare();
-
-        FoodItem pizza = FoodFactory.createFood("pizza");
+        
+        FoodCreator pizzaCreator = new PizzaCreator();
+        FoodItem pizza = pizzaCreator.createFood();
         pizza.prepare();
-
 
         // ==============================
         // Decorator Pattern
