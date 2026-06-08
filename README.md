@@ -333,3 +333,67 @@ The goal of this project is to demonstrate how multiple software design patterns
 * Integrated multiple design patterns while maintaining low coupling between classes.
 * Updated UML diagrams to accurately represent the relationships between classes and design patterns.
 * Ensured all design patterns work together within a single restaurant management application.
+
+* ## How to Run
+
+**Prerequisites:**
+- Java 17 or later installed
+
+**Steps:**
+```bash
+# Clone the repository
+git clone https://github.com/pbharvad-ctrl/project---sprint-1-pbharvad.git
+cd project---sprint-1-pbharvad
+
+# Compile
+javac -cp src src/Main.java -d out
+
+# Run
+java -cp out Main
+```
+
+---
+
+### 5. Decorator Pattern – Food Customization
+
+The Decorator Pattern allows food items to be customized with additional toppings without modifying existing classes.
+
+#### Implemented Classes
+
+- `FoodDecorator` (abstract) — wraps a base food item
+- `CheeseDecorator` — adds cheese
+- `MushroomDecorator` — adds mushrooms
+- `SauceDecorator` — adds sauce
+
+#### Example Flow
+
+Customer selects food item → decorators applied for each topping → final price and description reflect all additions.
+
+#### Benefits
+
+- New toppings added without changing existing classes
+- Follows Open/Closed Principle
+- Keeps food item logic clean and modular
+
+---
+
+### 6. Command Pattern – Order Actions
+
+The Command Pattern encapsulates restaurant actions into command objects, separating order logic from business logic.
+
+#### Implemented Classes
+
+- `Command` (interface) — `execute()`, `undo()`
+- `PlaceOrderCommand` — places a new order
+- `CancelOrderCommand` — cancels an existing order
+- `OrderInvoker` — stores and triggers commands
+
+#### Example Flow
+
+Customer action triggered → command object created → invoker executes command.
+
+#### Benefits
+
+- Supports undo/redo functionality
+- Clean separation of actions from business logic
+- Easy to extend with new order actions
