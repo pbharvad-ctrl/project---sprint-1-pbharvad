@@ -397,3 +397,9 @@ Customer action triggered → command object created → invoker executes comman
 - Supports undo/redo functionality
 - Clean separation of actions from business logic
 - Easy to extend with new order actions
+
+- ## Known Issues & Incomplete Functionality
+
+- No known bugs at this time.
+- All six design patterns are fully implemented and functional.
+- All core features are working as expected.
